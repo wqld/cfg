@@ -1,0 +1,40 @@
+theme = "wq_theme"
+
+[editor]
+# show currently open buffers, only when more than one exists.
+bufferline = "multiple"
+# highlight all lines with a cursor
+cursorline = true
+# use relative line numbers
+line-number = "relative"
+# show a ruler at column 120
+rulers = [120]
+# force the theme to show colors
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+# disable automatically popups of signature parameter help
+auto-signature-help = false
+# show lsp messages in the status line
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[keys.normal]
+"a-," = "goto_previous_buffer"
+"a-." = "goto_next_buffer"
+"a-w" = ":buffer-close"
+"a-/" = "repeat_last_motion"
+"a-x" = "extend_to_line_bounds"
+"x" = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+"a-x" = "extend_to_line_bounds"
+"x" = ["extend_line_up", "extend_to_line_bounds"]
+
